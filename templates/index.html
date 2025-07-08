@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phishing URL Checker</title>
+</head>
+
+<body>
+    <h1>Phishing URL Checker</h1>
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter a URL" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if prediction %}
+    <h2>Result</h2>
+    <p><strong>URL:</strong> {{ url }}</p>
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+    {% endif %}
+</body>
+
+</html>
